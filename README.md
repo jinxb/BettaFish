@@ -495,6 +495,28 @@ class DeepSearchAgent:
 
 在 `ReportEngine/report_template/` 目录下创建新的模板，我们的Agent会自行选用最合适的模板。
 
+## 🖥️ 桌面应用（Electron 桌面端）
+
+为了在桌面环境快速体验系统，我们提供了基于 Electron 的桌面壳层。它会自动启动 Flask 主应用与所有 Streamlit 子应用，并在原生窗口中呈现完整的 Web 界面。
+
+### 使用步骤
+
+1. 按照“快速开始”章节准备好 Python 运行环境并安装依赖：`pip install -r requirements.txt`
+2. （可选）若本机的 Python 命令不是 `python` / `python3`，请将 `PYTHON` 环境变量指向正确的解释器
+3. 安装桌面端依赖：
+   ```bash
+   cd desktop
+   npm install
+   ```
+4. 启动桌面应用：
+   ```bash
+   npm start
+   ```
+
+Electron 会等待后端服务就绪后再打开窗口，退出应用时也会自动回收所有子进程。
+
+> 桌面端依赖 Node.js 18+。首次启动时 Streamlit 子应用需要一定时间完成预热，如果等待超过 2-3 分钟请查看终端输出确认后端是否启动成功。
+
 ## 🤝 贡献指南
 
 我们欢迎所有形式的贡献！

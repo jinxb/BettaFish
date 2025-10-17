@@ -494,6 +494,28 @@ The system supports uploading custom template files (.md or .txt format), select
 
 Create new templates in the `ReportEngine/report_template/` directory, and our Agent will automatically select the most appropriate template.
 
+## 🖥️ Desktop Application (Electron)
+
+We provide an Electron wrapper to deliver a desktop experience. It boots the Flask main application together with all Streamlit agents locally and then loads the existing web interface inside a native window.
+
+### How to Run
+
+1. Prepare the Python environment and install backend dependencies as described in the "Quick Start" section: `pip install -r requirements.txt`
+2. (Optional) If the Python executable on your machine is not exposed as `python` / `python3`, set the `PYTHON` environment variable to the desired interpreter path
+3. Install the desktop dependencies:
+   ```bash
+   cd desktop
+   npm install
+   ```
+4. Launch the desktop client:
+   ```bash
+   npm start
+   ```
+
+Electron waits for the backend services to become available before opening the window, and it gracefully shuts down all subprocesses when you exit the app.
+
+> The desktop shell requires Node.js 18 or later. The first launch may take a couple of minutes while the Streamlit apps warm up—if it takes longer, inspect the terminal logs to ensure the backend started successfully.
+
 ## 🤝 Contributing Guide
 
 We welcome all forms of contributions!

@@ -1,0 +1,16 @@
+{
+  "name": "bettafish-desktop",
+  "version": "0.1.0",
+  "description": "Electron desktop launcher for the BettaFish public opinion analysis platform.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "electron": "^28.3.0"
+  }
+}
